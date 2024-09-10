@@ -1,0 +1,8 @@
+/* You can import Tailwind here if using it */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, sans-serif;
+}

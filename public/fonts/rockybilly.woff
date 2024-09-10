@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'RockyBilly';
+  src: url('/fonts/rockybilly.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+nav ul li a {
+  font-family: 'RockyBilly', sans-serif; /* Apply the custom font */
+  font-size: 24px; /* Adjust the size as needed */
+}

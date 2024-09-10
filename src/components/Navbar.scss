@@ -1,0 +1,111 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap');
+
+.hoverable {
+  display: inline-block;
+  backface-visibility: hidden;
+  vertical-align: middle;
+  position: relative;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transform: translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hoverable:hover,
+.hoverable:active,
+.hoverable:focus {
+  transform: translateY(-5px);
+}
+
+@keyframes bounce-animation {
+  16.65% {
+    transform: translateY(8px);
+  }
+  33.3% {
+    transform: translateY(-6px);
+  }
+  49.95% {
+    transform: translateY(4px);
+  }
+  66.6% {
+    transform: translateY(-2px);
+  }
+  83.25% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation-name: bounce-animation;
+  animation-duration: 2s;
+}
+
+/* Navigation Bar Styling */
+nav {
+  position: relative;
+  padding: 1em 0;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo img {
+  height: 50px; /* Adjust the height of your logo as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex; /* Arrange items horizontally */
+  justify-content: center; /* Center the items */
+  flex-grow: 1; /* Ensure the menu takes up remaining space */
+}
+
+nav ul li {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+nav ul li a {
+  font-family: 'Poppins', sans-serif; /* Stylish font for navigation links */
+  transition: 0.3s border ease-in-out;
+  text-decoration: none;
+  color: #fff; /* White text */
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid transparent; /* Invisible border by default */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  border-bottom: 2px solid white; /* White underline on hover/focus */
+}
+
+.page-title {
+  font-family: 'Roboto', sans-serif; /* Unique font for page titles */
+  opacity: 0.75 !important;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* General font */
+  background-color: rgba(0, 0, 0, 1);
+  font-weight: 600;
+  text-align: center !important;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    text-align: center !important;
+    float: none;
+    display: inline-block;
+  }
+}

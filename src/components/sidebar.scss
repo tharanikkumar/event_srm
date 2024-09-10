@@ -1,0 +1,59 @@
+.sidebar {
+    width: 100px;
+    height: 100vh;  /* Full height sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;  /* Align items at the top */
+    background-color: transparent; /* Transparent background */
+    padding-top: 20px;  /* Add some padding to the top */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);  /* Soft shadow for visual separation */
+    overflow-y: auto;  /* Enable scrolling if content overflows */
+}
+
+ul {
+    list-style: none;  /* Remove bullet points */
+    padding: 0;  /* Remove default padding */
+    margin: 0;  /* Remove default margin */
+    width: 100%;  /* Ensure ul takes full width of sidebar */
+}
+
+li {
+    cursor: pointer;  /* Pointer cursor for interactivity */
+    padding: 10px;  /* Padding around each item */
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease;  /* Smooth hover transition */
+    text-align: center;  /* Center items horizontally */
+}
+
+li:hover {
+    background-color: rgba(0, 0, 0, 0.1);  /* Light background on hover */
+    transform: scale(1.1);  /* Slight zoom effect */
+}
+
+li img {
+    width: 60px;  /* Ensure all icons have the same size */
+    height: 60px;  /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;  /* Center icons */
+}
+
+li:focus {
+    outline: 2px solid #00f;  /* Blue outline for accessibility */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;  /* Narrower sidebar for smaller screens */
+        height: auto;  /* Adjust height for small devices */
+    }
+
+    li img {
+        width: 40px;  /* Smaller icon size on small screens */
+        height: 40px;
+    }
+
+    li {
+        padding: 8px;  /* Reduce padding on smaller screens */
+    }
+}

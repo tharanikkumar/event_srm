@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+  margin: 0;
+  
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.App {
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* Background Gradient */
+main {
+  background: linear-gradient(to bottom, #333, #000); /* Lighter gray to dark black */
+  min-height: 100vh;
+  padding-bottom: 50px; /* Adjust as needed */
+}
+
+/* Main Styles */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8); /* Darker overlay for more contrast */
+  color: white;
+  text-align: center;
+  padding-bottom: 100px;
+  padding-top: 10px; /* Adjust if needed */
+  overflow: hidden; /* Ensure scaling does not cause overflow */
+}
+
+.hero-section h1 {
+  font-size: 5rem; /* Larger initial text size */
+  color: #fff;
+  font-family: 'Impact', sans-serif;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Stronger shadow for better visibility */
+  transition: transform 0.2s ease; /* Faster scaling effect */
+}
+
+.events-section {
+  padding: 4rem 2rem;
+  background: rgba(0, 0, 0, 0.9); /* Even darker background for sections */
+  color: white;
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth fade and parallax effects */
+}
+
+.events-section h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.events-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Space between cards */
+  justify-content: center; /* Center align cards */
+}
+
+/* Event Card Styles */
+.event-card {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border: 1px solid #444; /* Border to differentiate cards */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1rem;
+  width: 250px; /* Card width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.event-card:hover {
+  background: rgba(255, 255, 255, 0.2); /* Lighten background on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.event-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.event-date {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.event-description {
+  font-size: 1rem;
+}
